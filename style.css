@@ -1,0 +1,337 @@
+* {
+    /* Content - The content of the box, where text and images appear
+Padding - Clears an area around the content. The padding is transparent
+Border - A border that goes around the padding and content
+Margin - Clears an area outside the border. The margin is transparent */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* just need only the font family line of the code */
+    font-family: "Roboto Condensed", sans-serif;
+
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    /* ELEMENTS SHOULD BE RESPECT TO THE CONTAINER */
+    position: relative;
+}
+
+nav {
+    /* GAP BETWEEN IMAGES AND LINK */
+    display: flex;
+    justify-content: space-between;
+    /* VERTICALLY CENTER */
+    align-items: center;
+    /* RIGHT SHIFT */
+    margin-left: 100px;
+}
+
+/* navigation bar- */
+.logo {
+    width: 200px;
+}
+
+.list-items {
+    /* TO REMOVE DOT */
+    list-style: none;
+    /* TO MAKE A LINKS IN A LINE */
+    display: inline;
+    /* SPACE IN THE TIP AND BOTTOM */
+    margin: 0px 20px;
+}
+
+.links {
+    /* line remove  UNDER LINE*/
+    text-decoration: none;
+    /* bond */
+    font-weight: 600;
+    /* colour */
+    color: black
+}
+
+.links:hover {
+    /* underline for the links */
+    text-decoration: underline;
+    /* color for the links */
+    color: red;
+}
+
+/* home section - content-heading-paragraph-link,images -2 images overelap */
+.home-content {
+    /* SPACE RIGHR BOTTOM TOP LEFT, % RELATEDD TO THE PARENT ,0 PX  */
+    margin: 13% 0px 0px 8%;
+}
+
+#username {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: "Playwrite GB S", cursive;
+}
+
+#lname {
+    color: yellow;
+    font-family: "Playwrite GB S", cursive;
+}
+
+#user-details {
+    line-height: 1.2;
+}
+
+#download {
+    /* remove line */
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    /* space between the contentand the border */
+    padding: 10px;
+    /* round the corners of an element outer border edge */
+    border-radius: 10px;
+    /* adjust the hieght and width of theindvidual children within the element */
+    display: inline-block;
+    /* margin area of the top */
+    margin-top: 30px;
+}
+
+.home-img {
+    width: 45%;
+    height: 75%;
+    /* you can accese thge top bottom left right */
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+}
+
+.group1 {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    left: 50%;
+    /*  moves an element from its current position */
+    transform: translateX(-50%);
+    /*  change property values smoothly, over a given duration.- duration of the effect-property you want to add an effec */
+    transition: bottom 2s, left 1s;
+}
+
+/* create image overlay hover effects. */
+
+.home-img:hover #shape {
+    bottom: 100px;
+}
+
+
+.home-img:hover #girl {
+    left: 40%;
+}
+
+#about {
+    margin: 30% 8% 0 8%;
+}
+
+.section-head {
+    text-align: center;
+}
+
+.main-head {
+    font-size: 30px;
+
+}
+
+.sub-head {
+    font-size: 20px;
+    color: rgb(6, 186, 6);
+}
+
+/* one row ,two contents - flex ,,.about body*/
+.about-body {
+    margin-top: 20px;
+    /* one row two content */
+    /* to adjust the size the contenta and coloumns we use  gird instesd of flex  */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    align-items: center;
+
+}
+
+.about-img>img {
+    width: 80%;
+}
+
+.above-content {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.informations {
+    margin-top: 1.3rem;
+}
+
+.info-box {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.info-box>span {
+    margin-left: 1rem;
+}
+
+
+/* skillss */
+#skill {
+    margin: 8% 8% 100px 8%;
+}
+
+.skill-contents {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 20px;
+    align-items: center;
+
+}
+
+.myskill {
+    width: 60%;
+}
+
+/* progress bars */
+.bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1rem opx;
+}
+
+.bar-head,
+.bar-percent {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.base-bar {
+    background-color: black;
+    height: 0.5rem;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.html-bar {
+    background-color: orange;
+    width: 89%;
+}
+
+.css-bar {
+    background-color: orange;
+    width: 82%;
+}
+
+.JS-bar {
+    background-color: orange;
+    width: 79%;
+}
+
+.React-bar {
+    background-color: orange;
+    width: 75%;
+}
+
+/* contact */
+#contact {
+    margin: 100px 8%;
+}
+
+/* seen in row ,we want to flex,-parent */
+.icon-collection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+/* icon */
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* border: solid 1px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+/* linear gradient- works only in backgtrouynd image */
+.icon:hover {
+    background-image: linear-gradient(to bottom right, white, yellow, red,
+            violet);
+}
+
+.brands {
+    color: black;
+    font-size: 30px;
+}
+
+.icon:hover .brands {
+    color: white;
+    /* animations in css */
+    animation: rotate 3s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    20% {
+        transform: rotate(-30deg);
+    }
+
+    40% {
+        transform: rotate(30deg);
+    }
+
+    60% {
+        transform: rotate(-30deg);
+    }
+
+    80% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+footer{
+    margin-top: 8%;
+}
+#copyright{
+    text-align: center;
+    font-weight: 600;
+}
+.up-arrow{
+    float: right;
+    margin: -40px 30px 30px 0px;
+}
+/* smoothness */
+html{
+    scroll-behavior: smooth;
+}
+/* scrollbar */
+::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: azure;
+}
+::-webkit-scrollbar-thumb{
+    background-color: orange;
+    border-radius: 10px;
+}
